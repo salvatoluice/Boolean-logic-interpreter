@@ -1,16 +1,11 @@
-const isVariable = (expression) => {
-    return /^[a-zA-Z]+$/.test(expression);
-  };
-  
-const isTrue = (expression) => {
-    return expression === 'T';
-  };
-  
-const isFalse = (expression) => {
-    return expression === 'F';
-  };
-  
-const isLiteral = (expression) => {
-    return isTrue(expression) || isFalse(expression);
-  };
+// Boolean Logic Interpreter
+
+const variables = {};
+
+const isValidVariable = (name) => /^[a-zA-Z]+$/.test(name);
+
+const isTrueLiteral = (value) => value === 'T';
+const isFalseLiteral = (value) => value === 'F';
+const isBooleanLiteral = (value) => isTrueLiteral(value) || isFalseLiteral(value);
+
 
