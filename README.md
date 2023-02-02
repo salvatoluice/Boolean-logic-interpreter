@@ -14,11 +14,17 @@ A JavaScript implementation of a Boolean logic interpreter that can evaluate sim
 ## Examples
 
 interpret('T ∨ F'); // returns true
+
 interpret('T ∧ F'); // returns false
+
 interpret('(T ∧ F) = F'); // returns true
+
 interpret('let X = F'); // returns false
+
 variables; // returns { X: false }
+
 interpret('let Y = ¬X'); // returns true
+
 interpret('¬X ∧ Y'); // returns true
 
 ## Function Definition
